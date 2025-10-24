@@ -1,0 +1,2 @@
+# esphome
+My esphome configuration
