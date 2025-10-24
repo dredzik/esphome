@@ -7,16 +7,10 @@ esp32:
   framework:
     type: esp-idf
 
-# Enable logging
 logger:
 
-# Enable Home Assistant API
 api:
   password: ""
-
-ota:
-  - platform: esphome
-    password: ""
 
 wifi:
   ssid: !secret wifi_ssid

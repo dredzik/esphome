@@ -8,10 +8,8 @@ esp32:
   framework:
     type: esp-idf
 
-# Enable logging
 logger:
 
-# Enable Home Assistant API
 api:
   password: ""
 
