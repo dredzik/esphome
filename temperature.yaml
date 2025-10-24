@@ -1,0 +1,53 @@
+esphome:
+  name: temperature
+  name_add_mac_suffix: true
+
+esp32:
+  board: seeed_xiao_esp32c6
+  variant: ESP32C6
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: ""
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+i2c:
+  id: bus_1
+  sda: GPIO22
+  scl: GPIO23
+  sda_pullup_enabled: false
+  scl_pullup_enabled: false
+  scan: True
+  frequency: 100kHz
+
+sensor:
+  - platform: bh1750
+    i2c_id: bus_1
+    name: "Illuminance"
+    update_interval: 10s
+
+  - platform: sht4x
+    i2c_id: bus_1
+    temperature:
+      name: "Temperature"
+    update_interval: 10s
+
+  - platform: sht4x
+    i2c_id: bus_1
+    humidity:
+      name: "Relative Humidity"
+    update_interval: 10s
+
+  - platform: adc
+    name: "Voltage"
+    pin:
+      number: GPIO1
+    attenuation: 11db
