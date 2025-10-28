@@ -48,4 +48,4 @@ sensor:
     name: "Voltage"
     pin:
       number: GPIO1
-    attenuation: 11db
+    attenuation: 12db
