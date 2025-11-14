@@ -3,7 +3,8 @@ esphome:
   name_add_mac_suffix: true
 
 esp32:
-  board: arduino_nano_esp32
+  board: seeed_xiao_esp32c6
+  variant: ESP32C6
   framework:
     type: esp-idf
 
