@@ -41,3 +41,13 @@ This Makefile is written so it will try to write firmware over usb to
 the `/dev/tty.usbmodem*` device. That obviously means that if you have
 multiple devices matching that wildcard, the results will be...
 interesting. Make sure you know what you're doing.
+
+## Sidenote
+
+```
+apt-get update
+apt-get install git python3 pip python3-requests python3-pycryptodome python3-charset-normalizer python3-pillow python3-colorama
+git clone https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor
+cd Xiaomi-cloud-tokens-extractor
+python3 token_extractor.py
+```
